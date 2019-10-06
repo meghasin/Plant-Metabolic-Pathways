@@ -1,0 +1,250 @@
+(
+(
+(
+(
+(
+(
+'Beta vulgaris':4)
+Beta:4)
+Chenopodiaceae:4)
+Caryophyllales:4,
+(
+(
+(
+(
+'Selaginella moellendorffii':4)
+Selaginella:4)
+Selaginellaceae:4)
+Selaginellales:4)
+Lycopodiopsida:4,
+(
+(
+(
+'Vitis vinifera':4)
+Vitis:4)
+Vitaceae:4)
+Vitales:4,
+(
+(
+(
+'Amborella trichopoda':4)
+Amborella:4)
+Amborellaceae:4)
+Amborellales:4,
+(
+(
+(
+(
+'Dioscorea rotundata':4)
+Dioscorea:4)
+Dioscoreaceae:4)
+Dioscoreales:4,
+(
+(
+(
+'Musa acuminata':4)
+Musa:4)
+Musaceae:4)
+Zingiberales:4,
+(
+(
+(
+'Leersia perrieri':4)
+Leersia:4,
+(
+'Aegilops tauschii':4)
+Aegilops:4,
+(
+'Brachypodium distachyon':4)
+Brachypodium:4,
+(
+'Zea mays':4)
+Zea:4,
+(
+'Triticum dicoccoides':4,
+'Triticum urartu':4,
+'Triticum aestivum':4
+)Triticum:4,
+(
+'Sorghum bicolor':4)
+Sorghum:4,
+(
+'Setaria italica':4)
+Setaria:4,
+(
+'Oryza barthii':4,
+'Oryza meridionalis':4,
+'Oryza glumipatula':4,
+'Oryza glaberrima':4,
+'Oryza punctata':4,
+(
+'Oryza sativa f. spontanea':4)
+'Oryza sativa':4,
+'Oryza brachyantha':4,
+'Oryza rufipogon':4,
+'Oryza longistaminata':4
+)Oryza:4,
+(
+'Hordeum vulgare':4)
+Hordeum:4
+)Poaceae:4)
+Poales:4
+)Liliopsida:4,
+(
+(
+(
+'Helianthus annuus':4)
+Helianthus:4)
+Asteraceae:4)
+Asterales:4,
+(
+(
+(
+'Nicotiana attenuata':4)
+Nicotiana:4,
+(
+'Solanum tuberosum':4,
+'Solanum lycopersicum':4
+)Solanum:4
+)Solanaceae:4)
+Solanales:4,
+(
+(
+(
+'Daucus carota':4)
+Daucus:4)
+Apiaceae:4)
+Apiales:4,
+(
+(
+(
+'Trifolium pratense':4)
+Trifolium:4,
+(
+'Vigna radiata':4,
+'Vigna angularis':4
+)Vigna:4,
+(
+'Phaseolus vulgaris':4)
+Phaseolus:4,
+(
+'Medicago truncatula':4)
+Medicago:4,
+(
+'Lupinus angustifolius':4)
+Lupinus:4,
+(
+'Glycine max':4)
+Glycine:4
+)Fabaceae:4)
+Fabales:4,
+(
+(
+(
+'Prunus persica':4)
+Prunus:4)
+Rosaceae:4)
+Rosales:4,
+(
+(
+(
+'Brassica oleracea':4,
+'Brassica rapa':4,
+'Brassica napus':4
+)Brassica:4,
+(
+'Arabidopsis halleri':4,
+'Arabidopsis lyrata':4,
+'Arabidopsis thaliana':4
+)Arabidopsis:4
+)Brassicaceae:4)
+Brassicales:4,
+(
+(
+(
+'Manihot esculenta':4)
+Manihot:4)
+Euphorbiaceae:4,
+(
+(
+'Populus trichocarpa':4)
+Populus:4)
+Salicaceae:4
+)Malpighiales:4,
+(
+(
+(
+'Cucumis sativus':4)
+Cucumis:4)
+Cucurbitaceae:4)
+Cucurbitales:4,
+(
+(
+(
+'Corchorus capsularis':4)
+Corchorus:4,
+(
+'Gossypium raimondii':4)
+Gossypium:4,
+(
+'Theobroma cacao':4)
+Theobroma:4
+)Malvaceae:4)
+Malvales:4,
+(
+(
+(
+(
+'Physcomitrella patens':4)
+Physcomitrella:4)
+Funariaceae:4)
+Funariales:4)
+Bryopsida:4
+)Streptophyta:4,
+(
+(
+(
+(
+(
+(
+'Ostreococcus lucimarinus CCE9901':4)
+'Ostreococcus sp. ''lucimarinus''':4)
+Ostreococcus:4)
+Bathycoccaceae:4)
+Mamiellales:4)
+Mamiellophyceae:4,
+(
+(
+(
+(
+'Chlamydomonas reinhardtii':4)
+Chlamydomonas:4)
+Chlamydomonadaceae:4)
+Chlamydomonadales:4)
+Chlorophyceae:4
+)Chlorophyta:4
+)Viridiplantae:4,
+(
+(
+(
+(
+(
+'Galdieria sulphuraria':4)
+Galdieria:4,
+(
+'Cyanidioschyzon merolae':4)
+Cyanidioschyzon:4
+)Cyanidiaceae:4)
+Cyanidiales:4)
+Bangiophyceae:4,
+(
+(
+(
+(
+'Chondrus crispus':4)
+Chondrus:4)
+Gigartinaceae:4)
+Gigartinales:4)
+Florideophyceae:4
+)Rhodophyta:4
+)Eukaryota:4;

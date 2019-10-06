@@ -1,0 +1,69 @@
+---
+title: "project_step2"
+output: html_document
+---
+
+
+## Step 2
+
+```{r }
+# Read UniProt to Plant Reactome - Pathways
+Pathways <- readRDS("UniProt2PlantReactome-pathways.rds")
+
+# Read UniProt to Plant Reactome - Reactions
+Reactions <- readRDS("UniProt2PlantReactome-Reactions.rds")
+
+# We start by joing the Pathways and Reaction dataframes based on the UniProtID
+mergedPathwayswithReactions <- merge(Pathways, Reactions, by="UniProtID")
+
+# Remove row entries with missing UniProtID
+
+mergedPathwayswithReactions[mergedPathwayswithReactions==""] <- NA
+mergedPathwayswithReactions <- na.omit(mergedPathwayswithReactions)
+
+#Merged_reduced = readRDS("UniProtID_merged_reduced_fixed.RDS")
+
+#Reducing the dataframe to only contain metabolic pathways which we are interested in
+mergedPathwayswithReactionsReduced <- mergedPathwayswithReactions[!grepl('Ribosomal',mergedPathwayswithReactions$Pathway.name),]
+
+
+mergedPathwayswithReactionsReduced <- mergedPathwayswithReactionsReduced[!grepl('Translation elongation',mergedPathwayswithReactionsReduced$Pathway.name),]
+
+mergedPathwayswithReactionsReduced <- mergedPathwayswithReactionsReduced[!grepl('Translation termination',mergedPathwayswithReactionsReduced$Pathway.name),]
+
+mergedPathwayswithReactionsReduced <- mergedPathwayswithReactionsReduced[!grepl('subunits',mergedPathwayswithReactionsReduced$Pathway.name),]
+
+mergedPathwayswithReactionsReduced <- mergedPathwayswithReactionsReduced[!grepl('Ribosomal scanning and start codon recognition',mergedPathwayswithReactionsReduced$Pathway.name),]
+
+mergedPathwayswithReactionsReduced <- mergedPathwayswithReactionsReduced[!grepl('Formation of the ternary complex',mergedPathwayswithReactionsReduced$Pathway.name),]
+
+mergedPathwayswithReactionsReduced <- mergedPathwayswithReactionsReduced[!grepl('43S',mergedPathwayswithReactionsReduced$Pathway.name),]
+
+
+write.csv(mergedPathwayswithReactionsReduced,'mergedPathwayswithReactionsReduced.csv', row.names = FALSE)
+```
+
+## Step 3
+```{r}
+#install.packages("jsonlite")
+library("jsonlite")
+json_file <- "https://plantreactome.gramene.org/ContentService/data/eventsHierarchy/Oryza%20sativa"
+EventHierarchy <- fromJSON(json_file)
+#child <- EventHierarchy$children
+#unlist <- unlist(child)
+#head(unlist)
+```
+
+```{r}
+pwy_rxn_MappingByOrthocounts <- read.delim("slice_18_pathway-reaction-mapping-orthocounts_by_pwy_rxn-.tsv", stringsAsFactors = FALSE)
+
+pwy_rxn_MappingByOrthocounts[,2] <- sapply(strsplit(as.character(pwy_rxn_MappingByOrthocounts[,2]), split='.', fixed=TRUE), function(x) (x[1]))
+pwy_rxn_MappingByOrthocounts[,4] <- sapply(strsplit(as.character(pwy_rxn_MappingByOrthocounts[,4]), split='.', fixed=TRUE), function(x) (x[1]))
+
+for(i in 1:nrow(pwy_rxn_MappingByOrthocounts)) {
+  tmp <- which(pwy_rxn_MappingByOrthocounts[i,4]==mergedPathwayswithReactionsReduced[,4])
+  uniprots <- mergedPathwayswithReactionsReduced[tmp,1]
+  uniprots <- toString(unique(unlist(uniprots)))
+  pwy_rxn_MappingByOrthocounts[i,5] <- uniprots
+}
+```
